@@ -1,6 +1,6 @@
 import random
 import torchvision.transforms.functional as F
-import clip
+import model.clip
 
 class RandomFlipQ(object):
     """Flip the objects in the sample such that the correct answer is the opposite with probability p.

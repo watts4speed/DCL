@@ -5,9 +5,9 @@ from utils_extra import load_model
 from torchvision import transforms
 from PIL import Image
 import json
-import clip
+import model.clip
 from collections import defaultdict
-from model import AudioCLIPFinetune
+from model.audioclip_finetune import AudioCLIPFinetune
 import utils.transforms as audio_transforms
 import librosa
 import os

@@ -7,7 +7,8 @@ import argparse
 from utils_extra import get_logger, load_model
 from dataset.dataset import PACSImageAudioDataset
 from torchvision import transforms
-from transformers import AdamW
+#from transformers import AdamW
+from torch.optim import AdamW
 import torch.optim as optim
 import os
 from PIL import Image
@@ -15,7 +16,7 @@ import utils.transforms as audio_transforms
 import wandb
 import json
 import librosa
-import clip
+import model.clip
 from utils_extra import load_dataset, compute_acc_loss
 from trainer import train_model
 from tqdm import tqdm 
