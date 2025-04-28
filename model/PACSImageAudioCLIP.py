@@ -1,17 +1,18 @@
 from typing import Tuple, Union
-import torchvision.transforms as transforms
+#import torchvision.transforms as transforms
 import numpy as np
 import torch
-import torch.nn.functional as F
+#import torch.nn.functional as F
 from torch import nn
-import math
-import sys
+#import math
+#import sys
 from model.VAE.utils import contrastive_loss, compute_CDSVAE, compute_TransVAE
 from model.VAE.TrasVAE import TransVAE
-from model.VAE.CDSVAE import CDSVAE
+#from model.VAE.CDSVAE import CDSVAE
 import wandb
 from model.utils import ModifiedResNet, VisionTransformer, Transformer, LayerNorm, knowledge_caluate
-import time 
+#import time
+import sys
 
 class PACSImageAudioCLIP(nn.Module):
     def __init__(self,
@@ -98,8 +99,10 @@ class PACSImageAudioCLIP(nn.Module):
             if self.vae_type == 'TransVAE':
                 self.vae = TransVAE(opt=args)
             if self.vae_type == 'CDSVAE':
-                self.vae = CDSVAE(device="cuda", args=args)
-        
+                #self.vae = CDSVAE(device="cuda", args=args)
+                print("CDSVAE not implemented",)
+                sys.exit(1)
+
         self.use_knowledge = args.use_knowledge
         self.top_k = args.top_k #5
         self.use_static_knowledge = args.use_static_knowledge

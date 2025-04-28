@@ -4,7 +4,7 @@ import torch
 import torch.nn.functional as F
 
 from model.clip import CLIP
-from model.clip.clip import tokenize
+#from model.clip.clip import tokenize
 # from clip import tokenize
 from model.esresnet import ESResNeXtFBSP
 

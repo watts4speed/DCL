@@ -3,7 +3,7 @@ from torch.utils.data import Dataset
 import json
 import cv2
 from PIL import Image, ImageFile
-import clip
+#import model.clip
 import random
 import librosa
 import numpy as np
